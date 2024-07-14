@@ -1,0 +1,15 @@
+{%load static%}
+<html>
+<head>
+        <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+</head>
+<body>
+<h1>Login here</h1>
+
+<form method="POST" autocomplete="off">
+    {% csrf_token %}
+    {{loginform.as_p}}
+    <input type="submit" value="Login"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "master.html" %}
+
+{% block title %}
+Musical artists
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1>Favourite Music Artists </h1>
+        <p>check out all the <a href="members/">Members</a></p>
+        <p>You can either <a href="{% url 'register' %}">register</a> or <a href="{% url 'login' %}">login</a>.</p>
+    </div>
+{% endblock %}
