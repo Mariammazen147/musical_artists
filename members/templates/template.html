@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myglobal.css' %}">
+
+<body>
+{% include 'mymenu.html' %}
+
+<h1>Hello, what do you want to listen to today?</h1>
+
+<ul>
+  {% for x in mymembers %}
+    <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+
+  {% endfor %}
+</ul>
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>
